@@ -8,3 +8,13 @@ const sayHello = function(name) {
     }
     return "Hello, " + name;
 }
+
+function isFive(input){
+    if(typeof input === "number"){
+        return (Number(input)===5)
+    }else return false;
+}
+
+function isEven(){
+    return "function"
+}
