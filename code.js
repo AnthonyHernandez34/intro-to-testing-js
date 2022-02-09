@@ -23,4 +23,15 @@ function isEven(input) {
      return false
 }
 
-//
+//Question 12 starting testing phase line item 1 //
+
+function isVowel(input=false) {
+    let vowel = 'a' || 'e'
+    return (input.toString().toLowerCase() === vowel);
+}
+
+//question 13//
+
+function add(num1, num2){
+    return (Number(num1) + Number(num2));
+}

@@ -92,3 +92,62 @@ describe("isEven()",function (){
     });
 });
 
+describe("isVowel()",function (){
+    it('should be defined as a function', function () {
+        expect(typeof isVowel).toBe("function")
+    });
+    it('should always return a boolean',function (){
+       expect(typeof isVowel()).toBe("boolean")
+    });
+    it('should return true isVowel"a"', function () {
+       expect(isVowel('a')) .toBe(true)
+    });
+    it('should return true isVowel"A"', function () {
+        expect(isVowel('A')).toBe(true)
+    });
+    it('should return false isVowel"y"', function () {
+        expect(isVowel('y')).toBe(false)
+    });
+    it('should return false isVowel"4"', function () {
+        expect(isVowel('4')).toBe(false)
+    });
+    it('should return false isVowel(true)', function () {
+        expect(isVowel(true)).toBe(false)
+    });
+    it('should return true isVowel(false)', function () {
+        expect(isVowel(false)).toBe(false)
+    });
+    it('should return false isVowel(banana)', function () {
+        expect(isVowel("banana")).toBe(false)
+    });
+    it('should return false isVowel()', function () {
+        expect(isVowel()).toBe(false)
+    });
+});
+
+describe("add()", function(){
+    it('should be a defined function', function () {
+        expect(typeof add).toBe("function");
+    });
+    it('should return 5 for equation add(2, 3)', function () {
+        expect(add(2,3)).toBe(5);
+    });
+    it('should return -12 for equation  add(-3, -9)', function () {
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it('should return 11 for equation  add("5", 6)', function () {
+        expect(add("5",6)).toBe(11);
+    });
+    it('should return 6 for equation add("-4", "10")', function () {
+        expect(add("-4","10")).toBe(6);
+    });
+    it('should return NaN for equation add("banana", "split")', function () {
+        expect(add("banana","split")).toBeNaN("NaN");
+    });
+    it('should return Not a number for equation add(2, "apples")', function () {
+        expect(add(2,"apples")).toBeNaN("NaN");
+    });
+    it('should return Not a number for equation add()', function () {
+        expect(add()).toBeNaN("NaN");
+    });
+});
